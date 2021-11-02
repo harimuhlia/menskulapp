@@ -1,5 +1,7 @@
 @extends('Layout.App')
 @section('title', 'Data Ekstrakurikuler')
+@section('dataekskul', 'active')
+@section('main', 'show')
     
 @section('content')
 <div class="container-fluid">

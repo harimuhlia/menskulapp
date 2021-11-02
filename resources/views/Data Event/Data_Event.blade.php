@@ -151,6 +151,10 @@
                 <input type="file" class="form-control" name="foto_kegiatan" value="{{ old('foto_kegiatan', $event->foto_kegiatan)}}">
               </div>
               <div class="col-12">
+                <label for="namaPeserta">Nama Peserta Lomba</label>
+                <textarea class="textarea" rows="3" name="nama_peserta" placeholder="Nama Peserta Dan Official">{{ old('nama_peserta', $event->nama_peserta)}}</textarea>
+              </div>
+              <div class="col-12">
                 <label for="tempatLomba">Tempat Lomba</label>
                 <textarea class="form-control" rows="3" name="tempat_kegiatan" placeholder="Alamat Kegiatan">{{ old('tempat_kegiatan', $event->tempat_kegiatan)}}</textarea>
               </div>
@@ -280,7 +284,11 @@
                                 <input type="file" class="form-control" name="foto_kegiatan">
                               </div>
                               <div class="col-12">
-                                <label for="tempatLomba">Tempat Lomba</label>
+                                <label for="namaPeserta">Nama Peserta Lomba</label>
+                                <textarea class="textarea" rows="3" name="nama_peserta" placeholder="Nama Peserta Dan Official"></textarea>
+                              </div>
+                              <div class="col-12">
+                                <label for="tempatLomba">Alamat Lomba</label>
                                 <textarea class="form-control" rows="3" name="tempat_kegiatan" placeholder="Alamat Lomba Dilaksanakan"></textarea>
                               </div>
                             </div>

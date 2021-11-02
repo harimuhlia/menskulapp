@@ -12,7 +12,7 @@
 
               <div class="info-box-content">
                 <span class="info-box-text">Data Pembina</span>
-                <span class="info-box-number">22</span>
+                <span class="info-box-number">{{ $dataPembina }} Pembina Ekskul</span>
               </div>
               <!-- /.info-box-content -->
             </div>
@@ -25,7 +25,7 @@
 
               <div class="info-box-content">
                 <span class="info-box-text">Data Event</span>
-                <span class="info-box-number">57</span>
+                <span class="info-box-number">{{ $dataEvent }} Event/ Lomba</span>
               </div>
               <!-- /.info-box-content -->
             </div>
@@ -38,7 +38,7 @@
 
               <div class="info-box-content">
                 <span class="info-box-text">Data Prestasi</span>
-                <span class="info-box-number">87</span>
+                <span class="info-box-number">{{ $dataPrestasi }} Prestasi</span>
               </div>
               <!-- /.info-box-content -->
             </div>
@@ -51,7 +51,7 @@
 
               <div class="info-box-content">
                 <span class="info-box-text">Data Kegiatan</span>
-                <span class="info-box-number">187</span>
+                <span class="info-box-number">{{ $dataKegiatan }} Latihan Ekskul</span>
               </div>
               <!-- /.info-box-content -->
             </div>
@@ -61,11 +61,19 @@
         </div>
         <!-- /.row -->
         <!-- Main row -->
-        <h1>Bagian Dashboard</h1>
+        <h5>Bagian Dashboard</h5>
+        <!-- /.col -->
+      </div>
+      <!-- /.row -->
+    </div>
+    <!-- /.container-fluid -->
+  </section>
+  <!-- /.content -->
+</div>
+<!-- /.content-wrapper -->
         <!-- /.row (main row) -->
       </div><!-- /.container-fluid -->
     </section>
     <!-- /.content -->
   </div>
-      
 @endsection

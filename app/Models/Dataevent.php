@@ -12,6 +12,6 @@ class Dataevent extends Model
     protected $primaryKey = "id";
     protected $fillable = [
         'id', 'status_kegiatan', 'nama_kegiatan', 'tempat_kegiatan', 'tanggal_mulai_kegiatan', 'tanggal_akhir_kegiatan',
-        'penyelenggara_kegiatan', 'nama_pembimbing', 'jenis_lomba', 'cabang_lomba', 'foto_kegiatan',
+        'penyelenggara_kegiatan', 'nama_pembimbing', 'jenis_lomba', 'cabang_lomba', 'foto_kegiatan', 'nama_peserta'
     ];
 }

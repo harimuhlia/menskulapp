@@ -43,15 +43,16 @@ class DataeventController extends Controller
         ]);
         
         $dataevent= New Dataevent();
-        $dataevent->status_kegiatan=$request->get('status_kegiatan');
-        $dataevent->nama_kegiatan=$request->get('nama_kegiatan');
-        $dataevent->tempat_kegiatan=$request->get('tempat_kegiatan');
-        $dataevent->tanggal_mulai_kegiatan=$request->get('tanggal_mulai_kegiatan');
-        $dataevent->tanggal_akhir_kegiatan=$request->get('tanggal_akhir_kegiatan');
-        $dataevent->penyelenggara_kegiatan=$request->get('penyelenggara_kegiatan');
-        $dataevent->nama_pembimbing=$request->get('nama_pembimbing');
-        $dataevent->jenis_lomba=$request->get('jenis_lomba');
-        $dataevent->cabang_lomba=$request->get('cabang_lomba');
+        $dataevent->status_kegiatan=$request->input('status_kegiatan');
+        $dataevent->nama_kegiatan=$request->input('nama_kegiatan');
+        $dataevent->tempat_kegiatan=$request->input('tempat_kegiatan');
+        $dataevent->tanggal_mulai_kegiatan=$request->input('tanggal_mulai_kegiatan');
+        $dataevent->tanggal_akhir_kegiatan=$request->input('tanggal_akhir_kegiatan');
+        $dataevent->penyelenggara_kegiatan=$request->input('penyelenggara_kegiatan');
+        $dataevent->nama_pembimbing=$request->input('nama_pembimbing');
+        $dataevent->jenis_lomba=$request->input('jenis_lomba');
+        $dataevent->nama_peserta=$request->get('nama_peserta');
+        $dataevent->cabang_lomba=$request->input('cabang_lomba');
         if($request->hasFile('foto_kegiatan'))
         {
             $file = $request->file('foto_kegiatan');
@@ -111,6 +112,7 @@ class DataeventController extends Controller
         $dataevent->penyelenggara_kegiatan=$request->get('penyelenggara_kegiatan');
         $dataevent->nama_pembimbing=$request->get('nama_pembimbing');
         $dataevent->jenis_lomba=$request->get('jenis_lomba');
+        $dataevent->nama_peserta=$request->get('nama_peserta');
         $dataevent->cabang_lomba=$request->get('cabang_lomba');
         if($request->hasFile('foto_kegiatan'))
         {

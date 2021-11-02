@@ -35,3 +35,6 @@
   <link rel="stylesheet" href="{{ asset('AdminLTE')}}/plugins/sweetalert2-theme-bootstrap-4/bootstrap-4.min.css">
   <!-- Toastr -->
   <link rel="stylesheet" href="{{ asset('AdminLTE')}}/plugins/toastr/toastr.min.css">
+  <!-- Select2 -->
+  <link rel="stylesheet" href="{{ asset('AdminLTE')}}/plugins/select2/css/select2.min.css">
+  

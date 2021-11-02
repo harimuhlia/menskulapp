@@ -25,6 +25,7 @@ class CreateDataeventsTable extends Migration
             $table->string('jenis_lomba')->nullable();
             $table->string('cabang_lomba')->nullable();
             $table->string('foto_kegiatan')->nullable();
+            $table->text('nama_peserta')->nullable();
             $table->timestamps();
         });
     }
