@@ -82,6 +82,8 @@
                         <dd class="col-sm-8">{{$event->tanggal_akhir_kegiatan}}</dd>
                         <dt class="col-sm-4">Nama Pembimbing  </dt>
                         <dd class="col-sm-8">{{$event->nama_pembimbing}}</dd>
+                        <dt class="col-sm-4">Peserta Lomba  </dt>
+                        <dd class="col-sm-8">{!! $event->nama_peserta !!}</dd>
                         <dt class="col-sm-4">Tempat Lomba  </dt>
                         <dd class="col-sm-8">{{$event->tempat_kegiatan}}</dd>
                         <dt class="col-sm-4">Foto Lomba  </dt>

@@ -61,26 +61,18 @@
                     @csrf
                     <div class="card-body">
                       <dl class="row">
-                        {{-- <dt class="col-sm-4">Status Event  </dt>
-                        <dd class="col-sm-8">{{$event->status_kegiatan}}</dd>
-                        <dt class="col-sm-4">Nama Event  </dt>
-                        <dd class="col-sm-8">{{$event->nama_kegiatan}}</dd>
-                        <dt class="col-sm-4">Jenis Lomba  </dt>
-                        <dd class="col-sm-8">{{$event->jenis_lomba}}</dd>
-                        <dt class="col-sm-4">Cabang Lomba  </dt>
-                        <dd class="col-sm-8">{{$event->cabang_lomba}}</dd>
-                        <dt class="col-sm-4">Penyelenggara  </dt>
-                        <dd class="col-sm-8">{{$event->penyelenggara_kegiatan}}</dd>
-                        <dt class="col-sm-4">Waktu Mulai Lomba  </dt>
-                        <dd class="col-sm-8">{{$event->tanggal_mulai_kegiatan}}</dd>
-                        <dt class="col-sm-4">Waktu Berakhir Lomba  </dt>
-                        <dd class="col-sm-8">{{$event->tanggal_akhir_kegiatan}}</dd>
-                        <dt class="col-sm-4">Nama Pembimbing  </dt>
-                        <dd class="col-sm-8">{{$event->nama_pembimbing}}</dd>
-                        <dt class="col-sm-4">Tempat Lomba  </dt>
-                        <dd class="col-sm-8">{{$event->tempat_kegiatan}}</dd>
-                        <dt class="col-sm-4">Foto Lomba  </dt>
-                        <dd class="col-sm-8"><img src="{{ asset('fotoevent/'.$event->foto_kegiatan) }}" class="rounded" alt="" style="width: 100%"></dd> --}}
+                        <dt class="col-sm-4">Nama Pembina  </dt>
+                        <dd class="col-sm-8">{{$dt_pembina->name}}</dd>
+                        <dt class="col-sm-4">Email  </dt>
+                        <dd class="col-sm-8">{{$dt_pembina->email}}</dd>
+                        <dt class="col-sm-4">Role Akun  </dt>
+                        <dd class="col-sm-8">{{$dt_pembina->role}}</dd>
+                        <dt class="col-sm-4">Penugasan Pembina  </dt>
+                        <dd class="col-sm-8">{{$dt_pembina->jbtn_pelatih}}</dd>
+                        <dt class="col-sm-4">Alamat  </dt>
+                        <dd class="col-sm-8">{{$dt_pembina->alamat}}</dd>
+                        <dt class="col-sm-4">Foto Profil Pembina  </dt>
+                        <dd class="col-sm-8"><img src="{{ asset('fotoprofil/'.$dt_pembina->foto_profil) }}" class="rounded" alt="" style="width: 100%"></dd>
                     </div>
                 </div>
                 <div class="modal-footer justify-content-between">
