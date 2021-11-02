@@ -2,7 +2,9 @@
 
 @section('content')
 <div class="container">
-    <div class="row justify-content-center">
+
+    <h1>Assalamualaikum... Mohon maaf, untuk sementara fitur Registrasi kita Tutup dulu. Anda bisa menghubungi Administrator jika ingin membuat Akun. Terimakasih</h1>
+    {{-- <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
                 <div class="card-header">{{ __('Register') }}</div>
@@ -72,6 +74,6 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> --}}
 </div>
 @endsection
