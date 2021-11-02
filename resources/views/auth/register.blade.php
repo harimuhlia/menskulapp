@@ -3,7 +3,7 @@
 @section('content')
 <div class="container">
 
-    <h1>Assalamualaikum... Mohon maaf, untuk sementara fitur Registrasi kita Tutup dulu. Anda bisa menghubungi Administrator jika ingin membuat Akun. Terimakasih</h1>
+    <h1>Assalamualaikum... Mohon maaf, untuk sementara fitur Registrasi kita Tutup dulu. Anda bisa menghubungi Administrator jika ingin membuat Akun, Atau anda bisa langsung Login  jika sudah mempunyai Akun. Terimakasih</h1>
     {{-- <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
