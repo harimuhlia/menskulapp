@@ -28,7 +28,8 @@
           <th>Nama Ekskul</th>
           <th>Tempat Latihan</th>
           <th>Materi Latihan</th>
-          <th>Foto Latihan</th>
+          <th>Pembimbing</th>
+          {{-- <th>Foto Latihan</th> --}}
           <th>Action</th>
         </tr>
         </thead>
@@ -39,9 +40,10 @@
             <td>{{$dt_latihan->nama_ekskul}}</td>
             <td>{{$dt_latihan->tempat_latihan}}</td>
             <td>{{$dt_latihan->materi_latihan}}</td>
-            <td>
+            <td>{{$dt_latihan->author->name}}</td>
+            {{-- <td>
               <img src="{{ asset('fotolatihan/'.$dt_latihan->foto_latihan) }}" class="rounded" alt="" style="width: 80px">
-            </td>
+            </td> --}}
             <td>
               <a href="#" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#_detail-{{$dt_latihan->id}}"><i class="fas fa-eye"></i> Detail</a>
               <a href="#" class="btn btn-warning btn-sm" data-toggle="modal" data-target="#_edit-{{$dt_latihan->id}}"><i class="fas fa-edit"></i> Edit</a>
@@ -209,7 +211,8 @@
           <th>Nama Ekskul</th>
           <th>Tempat Latihan</th>
           <th>Materi Latihan</th>
-          <th>Foto Latihan</th>
+          <th>Pembimbing</th>
+          {{-- <th>Foto Latihan</th> --}}
           <th>Action</th>
         </tr>
         </tfoot>

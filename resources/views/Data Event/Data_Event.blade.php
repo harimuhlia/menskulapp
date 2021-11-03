@@ -37,7 +37,7 @@
                           {{-- <th>Status Event</th> --}}
                           <th>Nama Event</th>
                           {{-- <th>Jenis Lomba</th> --}}
-                          <th>Cabang Lomba</th>
+                          <th>Jenis Lomba</th>
                           <th>Penyelenggara</th>
                           <th>Waktu Event</th>
                           <th>Nama Pembimbing</th>
@@ -53,7 +53,7 @@
                           {{-- <td>{{ $event->status_kegiatan }}</td> --}}
                           <td>{{ $event->nama_kegiatan }}</td>
                           {{-- <td>{{ $event->jenis_lomba }}</td> --}}
-                          <td>{{ $event->cabang_lomba }}</td>
+                          <td>{{ $event->cabang_lomba}}</td>
                           <td>{{ $event->penyelenggara_kegiatan }}</td>
                           <td>{{ $event->tanggal_mulai_kegiatan }} - {{ $event->tanggal_akhir_kegiatan }}</td>
                           <td>{{ $event->nama_pembimbing }}</td>
@@ -267,7 +267,8 @@
                               </div>
                               <div class="col-6">
                                 <label for="namaPembimbing">Nama Pembimbing</label>
-                                <input type="text" class="form-control" name="nama_pembimbing" placeholder="Nama Pembimbing Lomba">
+                                <input type="text" class="form-control" name="nama_pembimbing" placeholder="Nama Pembimbing" readonly value="{{ old('nama_pembimbing', Auth::user()->name) }}">
+                                {{-- <input type="text" class="form-control" name="nama_pembimbing" placeholder="Nama Pembimbing Lomba"> --}}
                               </div>
                               <div class="col-6">
                                 <label for="jenisLomba">Jenis Lomba</label>

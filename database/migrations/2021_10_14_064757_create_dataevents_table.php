@@ -15,6 +15,8 @@ class CreateDataeventsTable extends Migration
     {
         Schema::create('dataevents', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('user_id')->nullable();
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade')->onUpdate('cascade');
             $table->string('status_kegiatan')->nullable();
             $table->string('nama_kegiatan')->nullable();
             $table->text('tempat_kegiatan')->nullable();

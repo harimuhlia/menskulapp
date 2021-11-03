@@ -15,6 +15,8 @@ class CreateDataekskulsTable extends Migration
     {
         Schema::create('dataekskuls', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('user_id')->nullable();
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade')->onUpdate('cascade');
             $table->string('kode_ekskul');
             $table->string('nama_ekskul');
             $table->timestamps();

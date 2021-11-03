@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Datalatihan;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\File;
 
 class DatalatihanController extends Controller
@@ -15,8 +16,16 @@ class DatalatihanController extends Controller
      */
     public function index()
     {
-        $dtlatihan = Datalatihan::all();
-        return view('Data Latihan.Data_Latihan', compact('dtlatihan'));
+        // $dtlatihan = Datalatihan::all();
+        // return view('Data Latihan.Data_Latihan', compact('dtlatihan'));
+
+        if (Auth::user()->role == 'Administrator') {
+            $dtlatihan = Datalatihan::All();
+            return view('Data Latihan.Data_Latihan', compact('dtlatihan'));
+        } else {
+            $dtlatihan = Datalatihan::where('user_id', auth()->user()->id)->get();
+            return view('Data Latihan.Data_Latihan', compact('dtlatihan'));
+        }
     }
 
     /**
@@ -43,6 +52,7 @@ class DatalatihanController extends Controller
         ]);
         
         $dtlatihan= New Datalatihan();
+        $dtlatihan->user_id=Auth::user()->id;
         $dtlatihan->nama_pembina=$request->get('nama_pembina');
         $dtlatihan->nama_ekskul=$request->get('nama_ekskul');
         $dtlatihan->hari_latihan=$request->get('hari_latihan');
@@ -105,6 +115,7 @@ class DatalatihanController extends Controller
         ]);
         
         $dtlatihan= Datalatihan::find($id);
+        $dtlatihan->user_id=Auth::user()->id;
         $dtlatihan->nama_pembina=$request->get('nama_pembina');
         $dtlatihan->nama_ekskul=$request->get('nama_ekskul');
         $dtlatihan->hari_latihan=$request->get('hari_latihan');

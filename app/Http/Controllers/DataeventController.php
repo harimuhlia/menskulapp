@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Dataevent;
 use Illuminate\Support\Facades\File;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 
 class DataeventController extends Controller
@@ -15,8 +16,20 @@ class DataeventController extends Controller
      */
     public function index()
     {
-        $dtevent = Dataevent::all();
-        return view('Data Event.Data_Event', compact('dtevent'));
+        // $dtevent = Dataevent::All();
+        // $dtevent = Dataevent::where('user_id', auth()->user()->id)->get();
+        if (Auth::user()->role == 'Administrator') {
+            $dtevent = Dataevent::All();
+            return view('Data Event.Data_Event', compact('dtevent'));
+        } else {
+            $dtevent = Dataevent::where('user_id', auth()->user()->id)->get();
+            return view('Data Event.Data_Event', compact('dtevent'));
+        }
+        
+        // if(Auth::user()->role == 'Administrator'){
+        //     $dtevent = Dataevent::All();
+        // }
+        // return view('Data Event.Data_Event', compact('dtevent'));
     }
 
     /**
@@ -43,6 +56,7 @@ class DataeventController extends Controller
         ]);
         
         $dataevent= New Dataevent();
+        $dataevent->user_id=Auth::user()->id;
         $dataevent->status_kegiatan=$request->input('status_kegiatan');
         $dataevent->nama_kegiatan=$request->input('nama_kegiatan');
         $dataevent->tempat_kegiatan=$request->input('tempat_kegiatan');
@@ -104,6 +118,7 @@ class DataeventController extends Controller
             'nama_kegiatan'=>'required',
         ]);
         $dataevent = Dataevent::find($id);
+        $dataevent->user_id=Auth::user()->id;
         $dataevent->status_kegiatan=$request->get('status_kegiatan');
         $dataevent->nama_kegiatan=$request->get('nama_kegiatan');
         $dataevent->tempat_kegiatan=$request->get('tempat_kegiatan');

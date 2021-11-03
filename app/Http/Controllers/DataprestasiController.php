@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Dataevent;
 use App\Models\Dataprestasi;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class DataprestasiController extends Controller
 {
@@ -15,8 +16,13 @@ class DataprestasiController extends Controller
      */
     public function index()
     {
-        $dtevent = Dataevent::all();
-        return view('Data Prestasi.Data_Prestasi', compact('dtevent'));
+        if (Auth::user()->role == 'Administrator') {
+            $dtevent = Dataevent::All();
+            return view('Data Prestasi.Data_Prestasi', compact('dtevent'));
+        } else {
+            $dtevent = Dataevent::where('user_id', auth()->user()->id)->get();
+            return view('Data Prestasi.Data_Prestasi', compact('dtevent'));
+        }
     }
 
     /**
