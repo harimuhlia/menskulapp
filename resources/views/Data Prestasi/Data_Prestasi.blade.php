@@ -16,7 +16,7 @@
     <div class="card-header">
       <h3 class="card-title">Data Seluruh Ekstrakurikuler</h3>
       <div class="card-tools">
-        <a href="#" class="btn btn-success btn-sm"><i class="fas fa-file-excel" title="Download Excel"></i> Export Excel</a>
+        <a href="#" class="btn btn-success btn-sm"><i class="fas fa-file-excel" title="Download Excel"></i> Import Excel</a>
       </div>
     </div>
     <!-- /.card-header -->
