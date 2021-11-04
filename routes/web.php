@@ -37,6 +37,9 @@ Route::middleware(['auth', 'ceklevel:Administrator,Pembina'])->group(function ()
     Route::resource('/dataevent', DataeventController::class);
     Route::resource('/dataprestasi', DataprestasiController::class);
     Route::resource('/datalatihan', DatalatihanController::class);
+
+    // ---------------Route Export Import Excel Data Event-------------------//
+    Route::get('/exportevent', [DataeventController::class, 'EventExport'])->name('exportevent');
     
     // ---------------Manage Profil-------------------//
     Route::get('/user/profile/{id}', [HomeController::class, 'userProfile'])->name('user.profile');

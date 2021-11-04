@@ -15,7 +15,7 @@
                   @enderror
                   <div class="card-header">
                     <a href="#" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#modal_tambah"><i class="fas fa-plus" title="Tambah Data"></i> Tambah Data</a>
-                    <a href="#" class="btn btn-success btn-sm"><i class="fas fa-plus" title="Download Data"></i> Download Excel</a>
+                    <a href="{{ route('exportevent') }}" class="btn btn-success btn-sm"><i class="fas fa-plus" title="Download Data"></i> Download Excel</a>
                     <div class="card-tools">
                       <div class="input-group input-group-sm" style="width: 250px;">
                         <input type="text" name="table_search" class="form-control float-right" placeholder="Search">

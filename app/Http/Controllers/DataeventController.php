@@ -2,6 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Exports\EventExport;
+use Maatwebsite\Excel\Facades\Excel;
+use App\Http\Controllers\Controller;
+
 use App\Models\Dataevent;
 use App\Models\Dataekskul;
 use Illuminate\Support\Facades\File;
@@ -28,6 +32,9 @@ class DataeventController extends Controller
 
     }
 
+    public function EventExport(){
+        return Excel::Download(New EventExport, 'dataevent.xlsx');
+    }
     /**
      * Show the form for creating a new resource.
      *
