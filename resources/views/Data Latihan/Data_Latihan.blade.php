@@ -241,11 +241,18 @@
                 <div class="row">
                   <div class="col-6">
                     <label for="namaPembina">Nama Pembina</label>
-                    <input type="text" class="form-control" required name="nama_pembina" placeholder="Masukan Nama Pembina">
+                    <input type="text" class="form-control" readonly required name="nama_pembina" value="{{ old('nama_pembina', Auth::user()->name) }}">
+                    {{-- <input type="text" class="form-control" required name="nama_pembina" placeholder="Masukan Nama Pembina"> --}}
                   </div>
                   <div class="col-6">
                     <label for="namaEkskul">Nama Ekskul</label>
-                    <input type="text" class="form-control" required name="nama_ekskul" placeholder="Masukan Nama Ekskul">
+                    {{-- <input type="text" class="form-control" required name="nama_ekskul" placeholder="Masukan Nama Ekskul"> --}}
+                    <select name="nama_ekskul" id="" class="form-control">
+                      <option value="">-- Pilih Ekskul -- </option>
+                      @foreach ($dtekskul as $item)
+                        <option value="{{ $item->nama_ekskul }}">{{ $item->nama_ekskul }}</option>
+                      @endforeach
+                    </select>
                   </div>
                   <div class="col-6">
                     <label for="hariLatihan">Hari Latihan</label>

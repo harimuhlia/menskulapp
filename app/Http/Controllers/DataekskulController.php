@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Dataekskul;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class DataekskulController extends Controller
 {
@@ -44,6 +45,7 @@ class DataekskulController extends Controller
         // DataEkskul::create($request->all());
 
         $dataekskul= New Dataekskul;
+        $dataekskul->user_id=Auth::user()->id;
         $dataekskul->kode_ekskul=$request->get('kode_ekskul');
         $dataekskul->nama_ekskul=$request->get('nama_ekskul');
         $dataekskul->save();

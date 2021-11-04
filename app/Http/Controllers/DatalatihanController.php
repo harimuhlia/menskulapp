@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Datalatihan;
+use App\Models\Dataekskul;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\File;
@@ -16,15 +17,13 @@ class DatalatihanController extends Controller
      */
     public function index()
     {
-        // $dtlatihan = Datalatihan::all();
-        // return view('Data Latihan.Data_Latihan', compact('dtlatihan'));
-
+        $dtekskul = Dataekskul::all();
         if (Auth::user()->role == 'Administrator') {
             $dtlatihan = Datalatihan::All();
-            return view('Data Latihan.Data_Latihan', compact('dtlatihan'));
+            return view('Data Latihan.Data_Latihan', compact('dtlatihan', 'dtekskul'));
         } else {
             $dtlatihan = Datalatihan::where('user_id', auth()->user()->id)->get();
-            return view('Data Latihan.Data_Latihan', compact('dtlatihan'));
+            return view('Data Latihan.Data_Latihan', compact('dtlatihan', 'dtekskul'));
         }
     }
 

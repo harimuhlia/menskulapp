@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Dataevent;
+use App\Models\Dataekskul;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
@@ -16,20 +17,15 @@ class DataeventController extends Controller
      */
     public function index()
     {
-        // $dtevent = Dataevent::All();
-        // $dtevent = Dataevent::where('user_id', auth()->user()->id)->get();
+        $dtekskul = Dataekskul::all();
         if (Auth::user()->role == 'Administrator') {
             $dtevent = Dataevent::All();
-            return view('Data Event.Data_Event', compact('dtevent'));
+            return view('Data Event.Data_Event', compact('dtevent', 'dtekskul'));
         } else {
             $dtevent = Dataevent::where('user_id', auth()->user()->id)->get();
-            return view('Data Event.Data_Event', compact('dtevent'));
+            return view('Data Event.Data_Event', compact('dtevent', 'dtekskul'));
         }
-        
-        // if(Auth::user()->role == 'Administrator'){
-        //     $dtevent = Dataevent::All();
-        // }
-        // return view('Data Event.Data_Event', compact('dtevent'));
+
     }
 
     /**

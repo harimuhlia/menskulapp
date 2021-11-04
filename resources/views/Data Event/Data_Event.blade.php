@@ -62,9 +62,9 @@
                           </td> --}}
                           {{-- <td>{{ $event->tempat_kegiatan }}</td> --}}
                           <td>
-                            <a href="#" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#_detail-{{$event->id}}"><i class="fas fa-eye"></i> Detail</a>
-                            <a href="#" class="btn btn-warning btn-sm" data-toggle="modal" data-target="#_edit-{{$event->id}}"><i class="fas fa-edit"></i> Edit</a>
-                            <a href="#" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#_hapus"><i class="fas fa-trash-alt"></i> Hapus</a>
+                            <a href="#" class="badge badge-success" data-toggle="modal" data-target="#_detail-{{$event->id}}"><i class="fas fa-eye"></i></a>
+                            <a href="#" class="badge badge-warning" data-toggle="modal" data-target="#_edit-{{$event->id}}"><i class="fas fa-edit"></i></a>
+                            <a href="#" class="badge badge-danger" data-toggle="modal" data-target="#_hapus"><i class="fas fa-trash-alt"></i></a>
                           </td>
                         </tr>
                         <!-- Modal Popup Awal -->
@@ -272,7 +272,13 @@
                               </div>
                               <div class="col-6">
                                 <label for="jenisLomba">Jenis Lomba</label>
-                                <input type="text" class="form-control" name="jenis_lomba" placeholder="Misalkan Bola Voli">
+                                {{-- <input type="text" class="form-control" name="jenis_lomba" placeholder="Misalkan Bola Voli"> --}}
+                                <select name="jenis_lomba" id="" class="form-control">
+                                  <option value="">-- Pilih Lomba -- </option>
+                                  @foreach ($dtekskul as $item)
+                                    <option value="{{ $item->nama_ekskul }}">{{ $item->nama_ekskul }}</option>
+                                  @endforeach
+                                </select>
                               </div>
                               <div class="col-6">
                                 <label for="cabangLomba">Cabang Lomba</label>

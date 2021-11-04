@@ -11,7 +11,7 @@
               <span class="info-box-icon bg-info"><i class="fas fa-user-friends"></i></span>
 
               <div class="info-box-content">
-                <span class="info-box-text">Data Pembina</span>
+                <span class="info-box-text">Data Seluruh Pembina</span>
                 <span class="info-box-number">{{ $dataPembina }} Pembina Ekskul</span>
               </div>
               <!-- /.info-box-content -->
@@ -24,7 +24,7 @@
               <span class="info-box-icon bg-success"><i class="fas fa-calendar-alt"></i></span>
 
               <div class="info-box-content">
-                <span class="info-box-text">Data Event</span>
+                <span class="info-box-text">Data Seluruh Event</span>
                 <span class="info-box-number">{{ $dataEvent }} Event/ Lomba</span>
               </div>
               <!-- /.info-box-content -->
@@ -37,7 +37,7 @@
               <span class="info-box-icon bg-warning"><i class="fas fa-trophy"></i></span>
 
               <div class="info-box-content">
-                <span class="info-box-text">Data Prestasi</span>
+                <span class="info-box-text">Data Seluruh Prestasi</span>
                 <span class="info-box-number">{{ $dataPrestasi }} Prestasi</span>
               </div>
               <!-- /.info-box-content -->
@@ -50,7 +50,7 @@
               <span class="info-box-icon bg-danger"><i class="fas fa-running"></i></span>
 
               <div class="info-box-content">
-                <span class="info-box-text">Data Kegiatan</span>
+                <span class="info-box-text">Data Seluruh Kegiatan</span>
                 <span class="info-box-number">{{ $dataKegiatan }} Latihan Ekskul</span>
               </div>
               <!-- /.info-box-content -->

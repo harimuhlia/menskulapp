@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Validation\ValidateIgnore;
 
@@ -62,7 +63,7 @@ class ManageuserController extends Controller
         $usermanage->name=$request->get('name');
         $usermanage->email=$request->get('email');
         $usermanage->role=$request->get('role');
-        $usermanage->password =bcrypt('$request->password');
+        $usermanage->password =Hash::make($request['password']);
         $usermanage->save();
 
         return redirect('/manageuser')->with('success', 'Alhamdulillah Berhasil Dibuat');
@@ -111,7 +112,7 @@ class ManageuserController extends Controller
              'name' => $request->name,
              'email' => $request->email,
              'role' => $request->role,
-             'password' => bcrypt($request->password),
+             'password' => Hash::make($request['password']),
          ]);
         // $usermanage= User::find($id);
         // $usermanage->name=$request->get('name');
