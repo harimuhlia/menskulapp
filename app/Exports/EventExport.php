@@ -15,6 +15,7 @@ class EventExport implements FromCollection
     */
     public function collection()
     {
+        
         if (Auth::user()->role == 'Administrator') {
             return Dataevent::all();
         } else {
