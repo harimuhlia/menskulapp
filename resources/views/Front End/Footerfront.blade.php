@@ -4,18 +4,18 @@
         <div class="row">
 
           <div class="col-lg-3 col-md-6 footer-info">
-            <img src="{{ asset('Frontend') }}/assets/img/logo-Front.png" alt="TheEvenet">
-            <p>In alias aperiam. Placeat tempore facere. Officiis voluptate ipsam vel eveniet est dolor et totam porro. Perspiciatis ad omnis fugit molestiae recusandae possimus. Aut consectetur id quis. In inventore consequatur ad voluptate cupiditate debitis accusamus repellat cumque.</p>
+            <img src="{{ asset('Frontend') }}/assets/img/logo.png" alt="TheEvenet">
+            <p>Menskull App adalah Aplikasi Manajemen Ekstrakurikuler berbasis Website yang digunakan untuk pencatata kegiatan Ekstrakurikuler, Data Prestasi, Data Even dan Lainnya. Aplikasi ini dikembangkan oleh SMK Negeri 5 Kabupaten Tangerang</p>
           </div>
 
           <div class="col-lg-3 col-md-6 footer-links">
-            <h4>Useful Links</h4>
+            <h4>Link Terkait</h4>
             <ul>
-              <li><i class="bi bi-chevron-right"></i> <a href="#">Home</a></li>
-              <li><i class="bi bi-chevron-right"></i> <a href="#">About us</a></li>
-              <li><i class="bi bi-chevron-right"></i> <a href="#">Services</a></li>
-              <li><i class="bi bi-chevron-right"></i> <a href="#">Terms of service</a></li>
-              <li><i class="bi bi-chevron-right"></i> <a href="#">Privacy policy</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="https://smkn5kabtangerangmauk.sch.id/" target="_blank">Website Utama</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="http://www.amis.smkn5kabtangerangmauk.sch.id/" target="_blank">AMIS E-Raport</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="https://lms.smkn5kabtangerangmauk.sch.id/" target="_blank">E-Learning</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="https://pd.smkn5kabtangerangmauk.sch.id/ma5ter/login.php" target="_blank">CBT/ Assesmen Online</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="https://ppdb.smkn5kabtangerangmauk.sch.id/" target="_blank">PPDB Online</a></li>
             </ul>
           </div>
 
@@ -31,13 +31,13 @@
           </div>
 
           <div class="col-lg-3 col-md-6 footer-contact">
-            <h4>Contact Us</h4>
+            <h4>Kontak Kami</h4>
             <p>
-              A108 Adam Street <br>
-              New York, NY 535022<br>
-              United States <br>
-              <strong>Phone:</strong> +1 5589 55488 55<br>
-              <strong>Email:</strong> info@example.com<br>
+               Jln. Ir. Sutami KM. 01, <br>
+               Kel. Mauk Barat, Kec. Mauk, <br>
+               Kab. Tangerang Banten Indonesia <br>
+              <strong>Telepon:</strong> (021) 59330830<br>
+              <strong>Email:</strong> smkn5kabtangerang@gmail.com<br>
             </p>
 
             <div class="social-links">

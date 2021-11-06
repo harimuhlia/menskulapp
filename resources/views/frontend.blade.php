@@ -4,7 +4,7 @@
       <!-- ======= Hero Section ======= -->
   <section id="hero">
     <div class="hero-container" data-aos="zoom-in" data-aos-delay="100">
-      <h1 class="mb-4 pb-0">Selamat Datang<br><span>Pembina</span> Ektrakurikuler</h1>
+      <h1 class="mb-4 pb-0">Selamat Datang<br><span>Di</span> Ektrakurikuler</h1>
       <p class="mb-4 pb-0">SMK Negeri 5 Kabupaten Tangerang Banten</p>
       <a href="https://www.youtube.com/watch?v=jDDaplaOz7Q" class="glightbox play-btn mb-4"></a>
       <a href="#about" class="about-btn scrollto">Tentang MenskullApp</a>
@@ -76,14 +76,17 @@
 
         <div class="row g-0">
           <div class="col-lg-6 venue-map">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-74.0062269!3d40.7101282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!2sDowntown+Conference+Center!5e0!3m2!1smk!2sbg!4v1539943755621" frameborder="0" style="border:0" allowfullscreen></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15870.113367928121!2d106.5057306!3d-6.0592419!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xfef2055b68b067a5!2sSMKN%205%20Kab.Tangerang!5e0!3m2!1sid!2sid!4v1636175230741!5m2!1sid!2sid" frameborder="0" style="border:0" allowfullscreen></iframe>
           </div>
 
           <div class="col-lg-6 venue-info">
             <div class="row justify-content-center">
               <div class="col-11 col-lg-8 position-relative">
-                <h3>Downtown Conference Center, New York</h3>
-                <p>Iste nobis eum sapiente sunt enim dolores labore accusantium autem. Cumque beatae ipsam. Est quae sit qui voluptatem corporis velit. Qui maxime accusamus possimus. Consequatur sequi et ea suscipit enim nesciunt quia velit.</p>
+                <h3>SMK Negeri 5 Kabupaten Tangerang</h3>
+                <p>Center Of Excelent (CoE) Dan SMK Pusat Keunggulan (PK) <br>
+                  SMK Negeri 5 Kabupaten Tangerang.<br>
+                  Jln. Ir. Sutami KM. 01, Kel. Mauk Barat, Kecamatan. Mauk,<br>
+                  Kab. Tangerang, Banten Indonesia.</p>
               </div>
             </div>
           </div>
