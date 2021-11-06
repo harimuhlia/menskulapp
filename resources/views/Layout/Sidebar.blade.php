@@ -14,7 +14,7 @@
         <img src="{{ asset('fotoprofil/'. Auth()->user()->foto_profil) }}" class="img-circle elevation-2" alt="User Image">
       </div>
       <div class="info">
-        <a href="#" class="d-block">{{ Auth()->user()->name }}</a>
+        <a href="{{ route('user.profile', Auth::user()->id) }}" class="d-block">{{ Auth()->user()->name }}</a>
         <span class="badge badge-success">{{ Auth()->user()->role }}</span>
       </div>
     </div>
