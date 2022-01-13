@@ -27,7 +27,7 @@ class ProfilController extends Controller
      */
     public function create()
     {
-        return view('Data Profil.Profil_Index');
+        return view('Data Profil.Profil_Index',);
     }
 
     /**

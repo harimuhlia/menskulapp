@@ -50,7 +50,7 @@
                       </div>
                     </div> --}}
                     <div class="form-group row">
-                      <label for="Ekskul" class="col-sm-3 col-form-label">Ekskul</label>
+                      <label for="Ekskul" class="col-sm-3 col-form-label">Pembina Ekskul</label>
                       <div class="col-sm-9">
                         <input type="text" class="form-control @error('ekskul') is-invalid @enderror" id="ekskul" name="ekskul" value="{{ $user->jbtn_pelatih }}">
                       </div>

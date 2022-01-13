@@ -53,13 +53,13 @@
                       </div>
                     </div>
                     <div class="form-group row">
-                      <label for="inputName2" class="col-sm-3 col-form-label">Penugasan</label>
+                      <label for="inputName2" class="col-sm-3 col-form-label">Role User</label>
                       <div class="col-sm-9">
                         <input type="text" class="form-control" disabled value="{{ Auth::user()->role }}">
                       </div>
                     </div>
                     <div class="form-group row">
-                      <label for="inputName2" class="col-sm-3 col-form-label">Ekskul</label>
+                      <label for="inputName2" class="col-sm-3 col-form-label">Pembina Ekskul</label>
                       <div class="col-sm-9">
                         <input type="text" class="form-control" disabled value="{{ Auth::user()->jbtn_pelatih }}">
                       </div>

@@ -31,6 +31,14 @@
                 @enderror
               </div>
               <div class="form-group">
+                <label for="email">Ekskul</label>
+                <select name="jenis_lomba" id="" class="form-control">
+                  <option value="">-- Pilih Lomba -- </option>
+                  {{-- @foreach ($dtekskul as $item)
+                    <option value="{{ $item->nama_ekskul }}">{{ $item->nama_ekskul }}</option>
+                  @endforeach --}}
+                </select>
+              <div class="form-group">
                 <label for="password">Password</label>
                 <input id="password" type="password" class="form-control" name="password" required autocomplete="new-password" placeholder="Password">
               </div>
