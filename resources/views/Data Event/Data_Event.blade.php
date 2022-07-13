@@ -64,13 +64,13 @@
                           <td>
                             <a href="#" class="badge badge-success" data-toggle="modal" data-target="#_detail-{{$event->id}}"><i class="fas fa-eye"></i></a>
                             <a href="#" class="badge badge-warning" data-toggle="modal" data-target="#_edit-{{$event->id}}"><i class="fas fa-edit"></i></a>
-                            <a href="#" class="badge badge-danger" data-toggle="modal" data-target="#_hapus"><i class="fas fa-trash-alt"></i></a>
+                            <a href="#" class="badge badge-danger" data-toggle="modal" data-target="#_hapus-{{$event->id}}"><i class="fas fa-trash-alt"></i></a>
                           </td>
                         </tr>
-                        <!-- Modal Popup Awal -->
+  <!-- Modal Popup Awal -->
 
 <!-- Modal Hapus -->
-<div class="modal fade" id="_hapus">
+<div class="modal fade" id="_hapus-{{ $event->id}}">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
