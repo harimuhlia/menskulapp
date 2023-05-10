@@ -47,11 +47,11 @@
             <td>
               <a href="#" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#_detail-{{$dt_latihan->id}}"><i class="fas fa-eye"></i> Detail</a>
               <a href="#" class="btn btn-warning btn-sm" data-toggle="modal" data-target="#_edit-{{$dt_latihan->id}}"><i class="fas fa-edit"></i> Edit</a>
-              <a href="#" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#_hapus"><i class="fas fa-trash-alt"></i> Hapus</a>
+              <a href="#" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#_hapus-{{ $dt_latihan->id}}"><i class="fas fa-trash-alt"></i> Hapus</a>
             </td>
           </tr> 
           <!-- Modal Hapus -->
-                <div class="modal fade" id="_hapus">
+                <div class="modal fade" id="_hapus-{{ $dt_latihan->id}}">
                   <div class="modal-dialog">
                     <div class="modal-content">
                       <div class="modal-header">
