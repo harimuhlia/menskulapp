@@ -8,6 +8,7 @@ use App\Http\Controllers\DatapembinaController;
 use App\Http\Controllers\DataprestasiController;
 use App\Http\Controllers\ManageuserController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\LaporanController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -45,6 +46,10 @@ Route::middleware(['auth', 'ceklevel:Administrator,Pembina'])->group(function ()
     Route::get('/user/profile/{id}', [HomeController::class, 'userProfile'])->name('user.profile');
     Route::get('/user/profile/edit/{id}',[HomeController::class, 'editUserProfile'])->name('user.profile.edit');
     Route::put('/user/profile/update/{id}',[HomeController::class, 'updateUserProfile'])->name('user.profile.update');
+
+    // ---------------Route Laporan-------------------//
+    Route::get('laporan/index', [LaporanController::class, 'index'])->name('laporan.index');
+    Route::post('laporan/select', [LaporanController::class, 'getData'])->name('laporan.select');
 });
 
 Route::middleware(['auth', 'ceklevel:Administrator'])->group(function () {

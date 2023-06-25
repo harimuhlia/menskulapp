@@ -28,11 +28,11 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $dataKegiatan   = DB::table('datalatihans')->count();
+        $dataEkskul   = DB::table('dataekskuls')->count();
         $dataPrestasi   = DB::table('dataevents')->count();
         $dataEvent      = DB::table('dataevents')->count();
         $dataPembina    = DB::table('users')->count();
-        return view('home', compact('dataKegiatan', 'dataPrestasi', 'dataEvent', 'dataPembina'));
+        return view('home', compact('dataEkskul', 'dataPrestasi', 'dataEvent', 'dataPembina'));
     }
 
     public function userProfile() {

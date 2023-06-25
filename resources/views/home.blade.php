@@ -50,8 +50,8 @@
               <span class="info-box-icon bg-danger"><i class="fas fa-running"></i></span>
 
               <div class="info-box-content">
-                <span class="info-box-text">Data Seluruh Kegiatan</span>
-                <span class="info-box-number">{{ $dataKegiatan }} Latihan Ekskul</span>
+                <span class="info-box-text">Data Seluruh Ekskul</span>
+                <span class="info-box-number">{{ $dataEkskul }} Ekstrakurikuler</span>
               </div>
               <!-- /.info-box-content -->
             </div>
