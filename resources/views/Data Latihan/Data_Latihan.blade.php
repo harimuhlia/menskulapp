@@ -16,6 +16,7 @@
     <div class="card-header">
       <h3 class="card-title">Seluruh Kegiatan Latihan</h3>
       <div class="card-tools">
+        <a href="laporan/index" class="btn btn-success btn-sm"><i class="fas fa-pencil-alt"></i> Laporan</a>
         <a href="#" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#modal-default"><i class="fas fa-plus" title="Tambah Data"></i> Tambah Data</a>
       </div>
     </div>

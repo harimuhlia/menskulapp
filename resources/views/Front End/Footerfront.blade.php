@@ -1,3 +1,4 @@
+<!-- ======= Footer ======= -->
 <footer id="footer">
     <div class="footer-top">
       <div class="container">
@@ -68,4 +69,5 @@
         Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
       </div>
     </div>
-  </footer><!-- End  Footer -->
+  </footer>
+  <!-- End  Footer -->
