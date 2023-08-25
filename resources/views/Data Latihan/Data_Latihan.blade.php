@@ -248,7 +248,7 @@
                   <div class="col-6">
                     <label for="namaEkskul">Nama Ekskul</label>
                     {{-- <input type="text" class="form-control" required name="nama_ekskul" placeholder="Masukan Nama Ekskul"> --}}
-                    <select name="nama_ekskul" id="" class="form-control">
+                    <select name="nama_ekskul" id="" class="form-control" required>
                       <option value="">-- Pilih Ekskul -- </option>
                       @foreach ($dtekskul as $item)
                         <option value="{{ $item->nama_ekskul }}">{{ $item->nama_ekskul }}</option>

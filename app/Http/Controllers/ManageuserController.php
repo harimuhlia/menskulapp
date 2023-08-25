@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Dataekskul;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
@@ -28,7 +29,8 @@ class ManageuserController extends Controller
      */
     public function create()
     {
-        return view('Manage User.User_Tambah');
+        $dataekskul = Dataekskul::all();
+        return view('Manage User.User_Tambah', compact('dataekskul'));
     }
 
     /**

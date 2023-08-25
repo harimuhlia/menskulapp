@@ -32,11 +32,11 @@
               </div>
               <div class="form-group">
                 <label for="email">Ekskul</label>
-                <select name="jenis_lomba" id="" class="form-control">
-                  <option value="">-- Pilih Lomba -- </option>
-                  {{-- @foreach ($dtekskul as $item)
+                <select name="nama_ekskul" id="" class="form-control">
+                  <option value="">-- Pilih Ekskul -- </option>
+                  @foreach ($dataekskul as $item)
                     <option value="{{ $item->nama_ekskul }}">{{ $item->nama_ekskul }}</option>
-                  @endforeach --}}
+                  @endforeach
                 </select>
               <div class="form-group">
                 <label for="password">Password</label>
