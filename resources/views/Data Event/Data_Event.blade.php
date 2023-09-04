@@ -148,7 +148,8 @@
             </div>
               <div class="col-12">
                 <label for="fotoLomba">Foto Kegiatan Lomba</label>
-                <input type="file" class="form-control" name="foto_kegiatan" value="{{ old('foto_kegiatan', $event->foto_kegiatan)}}">
+                <input type="file" class="form-control" name="foto_kegiatan" accept="image/*" id="foto_kegiatan" value="{{ old('foto_kegiatan', $event->foto_kegiatan)}}">
+                  <span id="error-message" style="color: red;"></span>
               </div>
               <div class="col-12">
                 <label for="namaPeserta">Nama Peserta Lomba</label>
@@ -325,5 +326,26 @@
       showConfirmButton: false,
       timer: 3000
     });
+</script>
+<script>
+document.getElementById('foto_kegiatan').addEventListener('change', function() {
+  const fileInput = this;
+  const errorMessage = document.getElementById('error-message');
+  
+  if (fileInput.files.length === 0) {
+    errorMessage.textContent = '';
+    return;
+  }
+
+  const file = fileInput.files[0];
+  const fileSize = file.size / 1024; // Convert to KB
+
+  if (!file.type.startsWith('image/') || fileSize > 1024) {
+    fileInput.value = ''; // Clear the file input
+    errorMessage.textContent = 'Hanya gambar dengan ukuran maksimal 1 MB yang diizinkan.';
+  } else {
+    errorMessage.textContent = '';
+  }
+});
 </script>
 @endsection
