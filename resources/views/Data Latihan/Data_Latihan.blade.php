@@ -138,7 +138,8 @@
                           </div>
                             <div class="col-12">
                               <label for="fotoLatihan">Foto Latihan</label>
-                              <input type="file" class="form-control" name="foto_latihan" value="{{ old('foto_latihan', $dt_latihan->foto_latihan)}}">
+                              <input type="file" class="form-control" name="foto_latihan" accept="image/*" id="foto_latihan" value="{{ old('foto_latihan', $dt_latihan->foto_latihan)}}">
+                              <span id="error-message" style="color: red;"></span>
                             </div>
                           </div>
                         </div>
@@ -319,6 +320,31 @@
       });
   </script>
 <!-- page script -->
+
+// Script untuk batasan upload foto latihan 
+<script>
+document.getElementById('foto_latihan').addEventListener('change', function() {
+  const fileInput = this;
+  const errorMessage = document.getElementById('error-message');
+  
+  if (fileInput.files.length === 0) {
+    errorMessage.textContent = '';
+    return;
+  }
+
+  const file = fileInput.files[0];
+  const fileSize = file.size / 1024; // Convert to KB
+
+  if (!file.type.startsWith('image/') || fileSize > 1024) {
+    fileInput.value = ''; // Clear the file input
+    errorMessage.textContent = 'Hanya gambar dengan ukuran maksimal 1 MB yang diizinkan.';
+  } else {
+    errorMessage.textContent = '';
+  }
+});
+</script>
+
+// Script untuk Data Table
 <script>
   $(function () {
     $("#example1").DataTable({
