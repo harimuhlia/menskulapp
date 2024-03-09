@@ -47,15 +47,19 @@
                 <img src="{{ asset('fotoevent/'.$prestasi->foto_kegiatan) }}" alt="Speaker 1" class="img-fluid">
                 <div class="details">
                   <h3>
-                    <a href="/show/{{$prestasi->id}}">{{ $prestasi->status_kegiatan }}</a>
+                    <a href="/show/{{$prestasi->id}}">{{ $prestasi->cabang_lomba }}</a>
                   </h3>
-                  <p>{{ $prestasi->cabang_lomba }}</p>
-                  <div class="social">
+                  <p>{{ $prestasi->status_kegiatan }}</p>
+                  <div class="btn">
+                    <a href="/show/{{$prestasi->id}}" class="btn-primary btn-sm"><i class="fas fa-plus" title="Lihat Detail"></i> Lihat Detail</a>
+                  </div>
+                  
+                  {{-- <div class="social">
                     <a href=""><i class="bi bi-twitter"></i></a>
                     <a href=""><i class="bi bi-facebook"></i></a>
                     <a href=""><i class="bi bi-instagram"></i></a>
                     <a href=""><i class="bi bi-linkedin"></i></a>
-                  </div>
+                  </div> --}}
                 </div>
               </div>
           </div>

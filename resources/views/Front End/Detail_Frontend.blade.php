@@ -7,8 +7,8 @@
     <section id="speakers-details">
       <div class="container">
         <div class="section-header">
-          <h2>{{ $detailfrontend->status_kegiatan }} {{ $detailfrontend->cabang_lomba }}</h2>
-          <p>{{ $detailfrontend->nama_kegiatan }}</p>
+          <h2>{{ $detailfrontend->status_kegiatan }}</h2>
+          <p>{{ $detailfrontend->cabang_lomba }}</p>
         </div>
 
         <div class="row">
@@ -18,20 +18,17 @@
 
           <div class="col-md-6">
               <span>Nama Pembimbing:</span>
-              <h4>{{ $detailfrontend->nama_pembimbing }}</h4>
-              
+              <p>{{ $detailfrontend->nama_pembimbing }}</p>
+              <span>Nama Event:</span>
+              <p>{{ $detailfrontend->nama_kegiatan }}</p>
               <span>Panitia Penyelenggara:</span>
-              <h4>{{ $detailfrontend->penyelenggara_kegiatan }}</h4>
-
+              <p>{{ $detailfrontend->penyelenggara_kegiatan }}</p>
               <span>Waktu Pelaksanaan:</span>
-              <h4>{{ $detailfrontend->tanggal_mulai_kegiatan }} - {{ $detailfrontend->tanggal_akhir_kegiatan }}</h4>
-              
+              <p>{{ $detailfrontend->tanggal_mulai_kegiatan }} s/d {{ $detailfrontend->tanggal_akhir_kegiatan }}</p>
               <span>Alamat Penyelenggara:</span>
               <p>{{ $detailfrontend->tempat_kegiatan }}</p>
-
               <span>Nama Peserta Lomba:</span>
               <p>{!! $detailfrontend->nama_peserta !!}</p>
-
             </div>
           </div>
 
